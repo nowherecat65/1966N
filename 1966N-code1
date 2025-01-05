@@ -6,6 +6,8 @@ e = campaignTrail_temp;
 
             nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#ff6b6b";
 
+            $("#game_window")[0].style.backgroundImage = "url(https://i.imgur.com/ib0KTOD.png)"
+
             document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
 
             $("#game_window")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_window;
@@ -95,3 +97,26 @@ style.innerHTML = `
 document.head.appendChild(style);
 
 document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#8f8f8f!important;}</style>";
+
+  $("#game_start").click((event) => {
+    event.preventDefault();
+    $("#election_id_button").click((event) => {
+        event.preventDefault();
+        $(".container")[0].style.backgroundColor = "#000201"
+        nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#310707";
+        nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#310707";
+        $("#game_window")[0].style.borderColor = "#310707"
+        $("#game_window")[0].style.coloring_window = "#310707"
+        $(".container")[0].style.backgroundColor = "#834444";
+        $("#game_window")[0].style.backgroundImage = "url(https://i.imgur.com/2vgYH9X.png)"
+        document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#c8acac!important;}</style>";
+        document.body.background = "https://i.imgur.com/SuD78mb.png"
+        document.getElementById("header").src = "https://i.imgur.com/YmiQm1e.pngg"
+        nct_stuff.themes[nct_stuff.selectedTheme].text_col = "white"
+        musicMode()
+        e.election_json[0].fields.summary = "<p>NIXON: And then there's this McGovern business. What the hell were those clowns thinking, putting that in Bremer's home?</p><p>HALDEMAN: We don't know for sure that they did it, sir.</p><p>NIXON: Like Hell we don't. (Sigh) We can't well have Humphrey or Muskie taking the nomination now, can we? (pauses) This is not good, Bob. We can't afford to have this backfire on us.</p><p>HALDEMAN: Agreed, sir. We'll handle it delicately.</p>"
+        e.election_json[0].fields.image_url = "https://i.imgur.com/9ZqnkhX.png"
+        setInterval(changeFontColour, 200)
+  
+    })
+  })
