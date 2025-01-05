@@ -54,8 +54,6 @@ RecReading=true
 
 campaignTrail_temp.credits = "<button onclick='credits()'>The Nixonverse Team</button>";
  
-$(".container")[0].style.backgroundColor = "#AD2D2F"
-
 credits = function() {
 
 
