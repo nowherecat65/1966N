@@ -4,6 +4,8 @@ e = campaignTrail_temp;
 
             nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#700016";
 
+            e.runIntro = true;
+
             nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#ff6b6b";
 
             document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
