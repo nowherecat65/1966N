@@ -4,8 +4,6 @@ e = campaignTrail_temp;
 
             nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#700016";
 
-            e.runIntro = true;
-
             nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#ff6b6b";
 
             document.getElementsByClassName("game_header")[0].style.backgroundColor = nct_stuff.themes[nct_stuff.selectedTheme].coloring_title;
@@ -79,17 +77,6 @@ credits = function() {
 
  }
 
-  $("#game_start").click((event) => {
-    event.preventDefault();
-    $("#election_id_button").click((event) => {
-        musicMode()
-
-        setInterval(changeFontColour, 200)
-  
-    })
-  })
-
-
 $("#game_window")[0].style.backgroundSize = "cover"; 
 
 let style = document.createElement('style');
@@ -108,66 +95,3 @@ style.innerHTML = `
 document.head.appendChild(style);
 
 document.head.innerHTML += "<style>#results_container {color:#000000;} .inner_window_w_desc {background-color:#8f8f8f!important;}</style>";
-
-
-$("#game_start").click((event) => {
-    event.preventDefault();
-    $("#election_id_button").click((event) => {
-        event.preventDefault();
-        music.pause();
-        $("#game_window")[0].style.borderColor = "#3A0000" 
-        $(".container")[0].style.backgroundColor = "#0d0b0a"
-        $("#game_window")[0].style.backgroundColor = "#3A0000"
-        e.collect_results = true;
-        nct_stuff.themes[nct_stuff.selectedTheme].coloring_title = "#3A0000"  
-        nct_stuff.themes[nct_stuff.selectedTheme].coloring_window = "#676767" 
-        quotes = ["“McCarthyism is Americanism with its sleeves rolled.” ~ Joseph McCarthy", "“At long last, have you left no sense of decency?” ~ Joe Welsh", "“It is double pleasure to deceive the deceiver.” ~ Niccholo Machiavelli", "“There will be no interruptions, unless I think it's of importance.” ~ Joseph McCarthy", "“Roy Cohn is here speaking for Roy Cohn.” ~ Roy Cohn", "“Your motives are not always as altruistic as they seem to yourself.” ~ Bertrand Russell", "“The trouble with free elections is that you never know how they are going to turn out.” ~ Vyecheslav Molotov", "“Politics is theater, but it's more than that.  It concerns the future of all our citizens.” ~ John McCormack"]
-        customquote = quotes[Math.floor((Math.random() * quotes.length))]
-        
-        corrr=`\n<h2>CAMPAIGN TRAIL SHOWCASE</h2><font id='wittyquote' size='4' color='white'><em>`+customquote+`</em></font>`
-        document.body.background = "https://i.imgur.com/BW5QO74.jpg" 
-        bannerlist=["https://i.imgur.com/wIWLbi9.png"]
-        document.getElementById("header").src = bannerlist[Math.floor((Math.random() * bannerlist.length))] 
-        nct_stuff.themes[nct_stuff.selectedTheme].text_col = "white"
-        e.election_json[0].fields.summary = "<p>On the Convention Floor, things were quiet.  It was the 1956 Republican Convention, and for the first time since its beginning the Dewey acolytes and their enemies on the other fringe of the party had quit their mudslinging.  The RNC Chair, Arthur Summerfield stepped down, and dared to stray forth into this once-intrepid political jungle.</p><p>The quiet grew thunderous as Summerfield continued, before finally he grew tired of playing the waiting game and moved in close, where a huddled group of McCarthy delegates were busily whispering amongst themselves, a few holding a copy of the same newspaper, this morning's copy of the Evening Star, a D.C. paper.<br><br><br><button onclick='next0()'>More</button</p>"
-       e.election_json[0].fields.image_url = "https://files.catbox.moe/8883og.png"
-        setInterval(changeFontColour, 200)
-        next1 = function() {
-          const imageElement = document.querySelector('#election_image img');
-          imageElement.setAttribute('src', 'https://files.catbox.moe/e1rmx8.png');
-          
-          text = "<div style='position: relative;'>"+
-                 "<p>Finally reaching the Knowland Camp, Summerfield attempted to withhold his growing rage at such foolishness.</p>"+
-                 "<p>Knowland's campaign manager, Milton Marks felt just the same, and speculated out loud whether or not the Dewey or McCarthy people had been behind the leak.  Summerfield, for his thought, felt for sure the Democrats were behind it, and that the liberal Moody Family had cunningly intended to destroy Knowland.</p>"+
-                 "<p>Dewey's and McCarthy's men weren't budging, and Knowland's conservative delegates weren't going to vote for drafting a moderate.  <i>McCarthy...</i> By God, were they really considering it?<br><br><br>"+
-                 "<button style='position: absolute; left: -px; bottom: -9px;' onclick='back0()'>Reset</button>"+
-                 "</p></div>";
-          
-          document.getElementById("election_summary").innerHTML = text;
-      }
-        next0 = function() {
-          const imageElement = document.querySelector('#election_image img');
-              imageElement.setAttribute('src', 'https://files.catbox.moe/jix3uy.png');
-          text = "<p>The article was a wrecking ball.</p><p>Its title read 'UNCOVERED: KNOWLAND'S YEARS OF INFIDELITY.'  Summerfield's hands shook as he stepped away from the group, reading on.  The charges were astounding; detailing in length Knowland's relationship with Ruth Moody, wife of a now-deceased Democrat senator.  It got worse, though, as it explained that Helen Knowland, William's wife, had also been in an affair with Senator Moody, Ruth's husband.  Knowland had gone to extreme lengths to protect and impress his lover, the article continued, detailing how Knowland had gone under the knife to circumcise himself as a means to please his mistress.  The article ended with one last grenade, alleging Helen Knowland had attempted suicide after her lover's death, and that her husband covered it up.<br><br><button onclick='back1()'>Back</button><button onclick='next1()'>Next</button></p>"
-          document.getElementById("election_summary").innerHTML = text
-        }
-        back0 = function() {
-          const imageElement = document.querySelector('#election_image img');
-              imageElement.setAttribute('src', 'https://files.catbox.moe/8883og.png');
-          text = "<p>On the Convention Floor, things were quiet.  It was the 1956 Republican Convention, and for the first time since its beginning the Dewey acolytes and their enemies on the other fringe of the party had quit their mudslinging.  The RNC Chair, Arthur Summerfield stepped down, and dared to stray forth into this once-intrepid political jungle.</p><p>The quiet grew thunderous as Summerfield continued, before finally he grew tired of playing the waiting game and moved in close, where a huddled group of McCarthy delegates were busily whispering amongst themselves, a few holding a copy of the same newspaper, this morning's copy of the Evening Star, a D.C. paper.<br><br><br><button onclick='next0()'>More</button></p>"
-          document.getElementById("election_summary").innerHTML = text
-        }
-        back1 = function() {
-          const imageElement = document.querySelector('#election_image img');
-          imageElement.setAttribute('src', 'https://files.catbox.moe/195d0t.png');
-          
-          text = "<div style='position: relative;'>"+
-                 "<p>C: And you're sure none of this will be traced back?  The Senator—no, we can't let that happen. <br> ?: It won't.  You have my guarantee. <br> C: These people are savage, you know.  They want Joe gone—they're animals.  But we're fiercer, aren't we. <br> ?: You are. <br> C: Then a deal's a deal.  This will be a very beneficial arrangement, for the both of us. <br> ?: And for our nation, too.</p>"+
-                 "<button style='position: absolute; right: 868px; bottom: -91px;' onclick='back0()'>Reset</button>"+
-                 "</div>";
-          
-          document.getElementById("election_summary").innerHTML = text;
-      }
-      
-    })
-  })
