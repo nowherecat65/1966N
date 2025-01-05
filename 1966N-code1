@@ -57,7 +57,7 @@ campaignTrail_temp.credits = "<button onclick='credits()'>The Nixonverse Team</b
 credits = function() {
 
 
-   c = ["WRITTEN BY .theanswerisme, u/ARC-7652, Justanormalguyok, cobalt, History Lover, Nixonland, evasium.", "", "CODED BY: .theanswerisme", "", "Banners created by whatnamedidiuseagain. Thanks to all the playtesters, and the TCT community as a whole.", "","This is a creative and dramatized take on what might have happened if Nixon had won the Presidency in 1960. The mod team does not claim it is an objective prediction of events."]
+   c = ["WRITTEN BY .theanswerisme, u/ARC-7652, Justanormalguyok, cobalt, History Lover, Nixonland, evasium.", "", "CODED BY: .theanswerisme", "", "MAP BY: CatBoxXD", "", "Banners created by whatnamedidiuseagain. Thanks to all the playtesters, and the TCT community as a whole.", "","This is a creative and dramatized take on what might have happened if Nixon had won the Presidency in 1960. The mod team does not claim it is an objective prediction of events."]
 
 
    text = "CREDITS:\n\n"
