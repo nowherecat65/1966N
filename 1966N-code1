@@ -50,7 +50,7 @@ $(".container")[0].style.backgroundColor = "#0A0A0A";
 
 document.getElementById("header").src = "https://i.imgur.com/hIK67xD.png";
 
-document.body.background = "https://coolbackgrounds.io/images/backgrounds/white/pure-white-background-85a2a7fd.jpg";
+document.body.background = "https://i.imgur.com/m4soYnG.png";
 
 RecReading=true
 
