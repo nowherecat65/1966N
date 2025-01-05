@@ -79,6 +79,17 @@ credits = function() {
 
  }
 
+  $("#game_start").click((event) => {
+    event.preventDefault();
+    $("#election_id_button").click((event) => {
+        musicMode()
+
+        setInterval(changeFontColour, 200)
+  
+    })
+  })
+
+
 $("#game_window")[0].style.backgroundSize = "cover"; 
 
 let style = document.createElement('style');
